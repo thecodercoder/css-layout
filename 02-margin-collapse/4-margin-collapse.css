@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.block {
+  background-color: lightblue;
+  padding: 20px;
+  /* border: 2px solid transparent; */
+  /* display: flow-root; */
+}

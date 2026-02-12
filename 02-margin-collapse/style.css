@@ -1,0 +1,15 @@
+/* Decorative Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 20px;
+}
+
+div {
+  border: 4px solid hsl(0, 0%, 0%, 40%);
+  border-radius: 10px;
+  min-width: 200px;
+  min-height: 120px;
+}

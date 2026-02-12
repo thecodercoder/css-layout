@@ -1,0 +1,11 @@
+/*  */
+
+.parent {
+  background-color: darkgrey;
+  padding: 20px;
+}
+
+.child {
+  background-color: mediumslateblue;
+  margin: 40px;
+}
