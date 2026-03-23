@@ -1,0 +1,49 @@
+body {
+  background-color: #111;
+  color: #fff;
+}
+
+.block {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background-color: crimson;
+  top: 40px;
+  z-index: 1;
+  /* inset: 40px 20px 60px 80px; */
+}
+
+.parent {
+  position: relative;
+  z-index: 1;
+  background-color: lightgray;
+  height: 200px;
+  /* z-index: 0; */
+  /* opacity: 0.5; */
+  isolation: isolate;
+}
+
+.block2 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  z-index: -1;
+}
+
+.fixed {
+  background-color: darkviolet;
+  padding: 10px;
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 10;
+}
+
+.sticky {
+  background-color: darkcyan;
+  padding: 60px 20px;
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  z-index: 20;
+}
