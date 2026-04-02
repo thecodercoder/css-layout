@@ -1,0 +1,26 @@
+body {
+  background-color: #111;
+  color: #fff;
+}
+
+div {
+  padding: 20px;
+}
+
+.flex-parent {
+  background-color: gray;
+  display: flex;
+  gap: 20px 10px;
+  flex-wrap: wrap;
+}
+
+.flex-child {
+  background-color: darkblue;
+  flex: 1;
+
+  &:nth-child(2) {
+    background-color: darkmagenta;
+    flex: 2;
+    order: 1;
+  }
+}
