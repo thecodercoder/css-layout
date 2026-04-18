@@ -40,6 +40,10 @@ ul {
   padding: 0 0.75em;
 }
 
+.has-border {
+  border: 2px solid var(--color-purple-100);
+}
+
 .card {
   display: grid;
   grid-template-rows: auto 1fr;
@@ -53,7 +57,6 @@ ul {
   .header {
     background: var(--color-header-bg);
     padding: 5px 5px 5px 10px;
-    border: 2px solid var(--color-purple-100);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -88,19 +91,25 @@ ul {
     background: #fff;
     width: 20px;
     height: 20px;
-    border: 2px solid var(--color-purple-100);
 
+    &::before,
     &::after {
-      content: "+";
+      content: "";
       display: block;
       position: absolute;
-      top: 2px;
-      right: -0.5px;
-      font-family: Times;
-      font-weight: 700;
-      font-size: 29px;
-      line-height: 0.35em;
+      width: 15px;
+      height: 2px;
+      background: var(--color-purple-100);
+      top: 6.5px;
+      right: 0.5px;
+    }
+
+    &::before {
       rotate: 45deg;
+    }
+
+    &::after {
+      rotate: -45deg;
     }
   }
 
@@ -137,12 +146,12 @@ ul {
       background: var(--color-purple-100);
 
       .number {
+        font-family: monospace;
+        font-size: 1rem;
         background: var(--color-pink-900);
-        width: 2.25rem;
-        height: 2.25rem;
+        padding: 0.4em 0.7em;
         border: 4px solid;
         border-color: #fff var(--color-pink-300) var(--color-pink-300) #fff;
-        /* color: #fff; */
         display: grid;
         place-items: center;
       }
@@ -161,7 +170,6 @@ ul {
     &.files {
       display: flex;
       flex-wrap: wrap;
-      /* gap: ; */
       justify-content: space-around;
 
       .file {
@@ -172,7 +180,6 @@ ul {
 
         .doc-icon {
           padding: 2px;
-          border: 2px solid var(--color-purple-100);
           border-radius: 3px;
           width: 32px;
           height: 40px;
@@ -182,7 +189,7 @@ ul {
             content: "";
             display: block;
             height: 100%;
-            background-image: repeating-linear-gradient(#fff, #fff 2px, #000 2px, #000 4px, #fff 4px, #fff 6px);
+            background-image: repeating-linear-gradient(#fff, #fff 2px, #000 2px, #000 4px, #fff 4px, #fff 4px);
           }
         }
 
@@ -191,7 +198,6 @@ ul {
           height: 40px;
           background-color: var(--color-purple-700);
           border-radius: 50%;
-          border: 2px solid var(--color-purple-100);
           background-image: radial-gradient(#fff 5px, var(--color-purple-100) 5px, var(--color-purple-100) 8px, transparent 8px);
         }
 
@@ -199,7 +205,6 @@ ul {
           position: relative;
           width: 40px;
           height: 40px;
-          border: 2px solid var(--color-purple-100);
           border-radius: 3px;
           padding: 2px;
 
@@ -235,7 +240,6 @@ ul {
         display: block;
         width: 100%;
         height: 40px;
-        border: 2px solid var(--color-purple-100);
         border-radius: 3px;
         background: linear-gradient(to right, var(--color-pink-300) 90%, #fff 90%);
       }
@@ -302,7 +306,9 @@ ul {
 }
 
 /* Grid Styles */
+
 .grid {
   display: grid;
   gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15.625rem), 1fr));
 }
