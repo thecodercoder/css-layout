@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #111;
+  color: #fff;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin-block-end: 2rem;
+  line-height: 1;
+}
+
+.wrapper {
+  max-width: 62.5rem;
+  margin-inline: auto;
+  padding: 2rem;
+  display: grid;
+  justify-items: center;
+}
+
+.tags {
+  max-width: 30rem; /* 480px*/
+  list-style-type: none;
+
+  li {
+    background-color: hsl(256, 100%, 38%);
+    border-radius: 8px;
+    padding: 2px 8px;
+  }
+}

@@ -29,6 +29,17 @@ a {
   max-width: 62.5rem;
   margin-inline: auto;
   list-style-type: none;
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+
+  @media (width >= 50rem) {
+    gap: 20px;
+
+    li:first-child {
+      margin-inline-end: auto;
+    }
+  }
 
   a {
     font-size: 0.875rem; /* 14px */
