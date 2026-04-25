@@ -19,19 +19,6 @@ body {
 img {
   max-width: 100%;
   height: auto;
-  object-fit: cover;
-}
-
-h1 {
-  text-align: center;
-  margin-block-end: 2rem;
-  line-height: 1;
-}
-
-p {
-  position: relative;
-  top: 50%;
-  translate: 0 -50%;
 }
 
 .wrapper {
@@ -41,23 +28,8 @@ p {
 }
 
 .has-border {
+  background-color: #fff;
   border: 6px solid #fff;
   border-radius: 20px;
   overflow: hidden;
-}
-
-.cat {
-  height: 100%;
-}
-
-.dog {
-  height: 100%;
-}
-
-.text {
-  background-color: hsl(259, 100%, 33%);
-  font-size: 3rem;
-  font-weight: 900;
-  line-height: 1;
-  text-align: center;
 }

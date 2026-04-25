@@ -33,6 +33,10 @@ h1 {
 .tags {
   max-width: 30rem; /* 480px*/
   list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 
   li {
     background-color: hsl(256, 100%, 38%);

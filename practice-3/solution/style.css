@@ -19,19 +19,6 @@ body {
 img {
   max-width: 100%;
   height: auto;
-  object-fit: cover;
-}
-
-h1 {
-  text-align: center;
-  margin-block-end: 2rem;
-  line-height: 1;
-}
-
-p {
-  position: relative;
-  top: 50%;
-  translate: 0 -50%;
 }
 
 .wrapper {
@@ -41,6 +28,7 @@ p {
 }
 
 .has-border {
+  background-color: #fff;
   border: 6px solid #fff;
   border-radius: 20px;
   overflow: hidden;
@@ -48,38 +36,35 @@ p {
 
 .bento {
   display: grid;
-  grid-template-rows: repeat(4, 150px);
+  grid-template-rows: repeat(3, 200px);
   grid-template-areas:
+    "cat"
     "dog"
-    "cat"
-    "cat"
-    "text";
+    "bird";
 
-  @media (width >= 40rem) {
-    grid-template-columns: repeat(4, 1fr);
+  @media (width >= 37.5rem) {
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 200px);
     grid-template-areas:
-      "dog dog cat cat"
-      "dog dog cat cat"
-      "text text cat cat";
+      "dog cat"
+      "dog cat"
+      "bird cat";
   }
-}
 
-.cat {
-  grid-area: cat;
-  height: 100%;
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .dog {
   grid-area: dog;
-  height: 100%;
 }
 
-.text {
-  background-color: hsl(259, 100%, 33%);
-  font-size: 3rem;
-  font-weight: 900;
-  line-height: 1;
-  text-align: center;
-  grid-area: text;
+.cat {
+  grid-area: cat;
+}
+
+.bird {
+  grid-area: bird;
 }
