@@ -29,15 +29,6 @@ a {
   max-width: 62.5rem;
   margin-inline: auto;
   list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  justify-content: space-evenly;
-  gap: 10px;
-
-  @media (width >= 50rem) {
-    grid-template-columns: 1fr repeat(3, auto);
-    gap: 20px;
-  }
 
   a {
     font-size: 0.875rem; /* 14px */
