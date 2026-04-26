@@ -17,6 +17,7 @@ body {
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
 }
@@ -37,34 +38,28 @@ img {
 .bento {
   display: grid;
   grid-template-rows: repeat(3, 200px);
-  grid-template-areas:
-    "cat"
-    "dog"
-    "bird";
+  grid-template-areas: "cat" "dog" "bird";
 
   @media (width >= 37.5rem) {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 200px);
-    grid-template-areas:
-      "dog cat"
-      "dog cat"
-      "bird cat";
+    grid-template-rows: 400px 200px;
+    grid-template-areas: "dog cat" "bird cat";
   }
 
   img {
     height: 100%;
     object-fit: cover;
   }
-}
 
-.dog {
-  grid-area: dog;
-}
+  .cat {
+    grid-area: cat;
+  }
 
-.cat {
-  grid-area: cat;
-}
+  .dog {
+    grid-area: dog;
+  }
 
-.bird {
-  grid-area: bird;
+  .bird {
+    grid-area: bird;
+  }
 }
