@@ -310,5 +310,13 @@ ul {
 .grid {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15.625rem), 1fr));
+  grid-template-columns: 1fr;
+
+  @media (width >= 40rem) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (width >= 50rem) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
